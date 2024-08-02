@@ -1,0 +1,181 @@
+import turtle
+
+# Create a turtle instance
+t = turtle.Turtle()
+
+# Set up the background
+bg = turtle.Screen()
+bg.bgcolor("black")
+
+#dish
+t.penup()
+t.setpos(- 200, -150)
+t.speed(1)
+t.begin_fill()
+t.fillcolor("red")
+t.forward(500)
+t.right(90)
+t.forward(10)
+t.right(90)
+t.forward(500)
+t.right(90)
+t.forward(10)
+t.right(90)
+t.end_fill()
+t.forward(25)
+t.left(90)
+
+
+
+# Bottom cake
+t.penup()
+t.speed(1)
+t.begin_fill()
+t.fillcolor("brown")
+t.forward(100)
+t.right(90)
+t.forward(400)
+t.right(90)
+t.forward(100)
+t.right(90)
+t.forward(400)
+t.right(90)
+t.end_fill()
+t.forward(100)
+t.right(90)
+t.forward(25)
+t.left(90)
+
+
+# Mid Line 2
+t.penup()
+t.speed(1)
+t.begin_fill()
+t.fillcolor("pink")
+t.forward(80)
+t.right(90)
+t.forward(350)
+t.right(90)
+t.forward(80)
+t.right(90)
+t.forward(350)
+t.right(90)
+t.end_fill()
+t.forward(80)
+t.right(90)
+t.forward(100)
+t.left(90)
+
+
+
+# Cake
+t.penup()
+t.color("white")
+t.begin_fill()
+t.pendown()
+for _ in range(2):
+    t.forward(95)
+    t.right(90)
+    t.forward(140)
+    t.right(90)
+t.end_fill()
+t.pendown()
+for _ in range(2):
+    t.forward(95)
+    t.left(90)
+    t.begin_fill()
+    t.color("red")
+    t.circle(7)
+    t.end_fill()
+    t.right(180)
+    t.forward(140)
+    t.left(180)
+    t.begin_fill()
+    t.color("red")
+    t.circle(7)
+    t.end_fill()
+    t.left(90)
+t.forward(95)
+t.right(90)
+t.forward(30)
+t.left(90)
+
+# Candles
+t.penup()
+t.color("purple")
+t.pendown()
+t.forward(20)
+t.begin_fill()
+t.color("yellow")
+t.circle(3)
+t.end_fill()
+
+
+t.penup()
+t.right(180)
+t.forward(20)
+t.left(90)
+t.forward(30)
+t.left(90)
+t.color("blue")
+t.pendown()
+t.forward(20)
+t.begin_fill()
+t.color("yellow")
+t.circle(3)
+t.end_fill()
+
+t.penup()
+t.right(180)
+t.forward(20)
+t.left(90)
+t.forward(30)
+t.left(90)
+t.color("orange")
+t.pendown()
+t.forward(20)
+t.begin_fill()
+t.color("yellow")
+t.circle(3)
+t.end_fill()
+
+t.penup()
+t.right(180)
+t.forward(20)
+t.left(90)
+t.forward(30)
+t.left(90)
+t.color("green")
+t.pendown()
+t.forward(20)
+t.begin_fill()
+t.color("yellow")
+t.circle(3)
+t.end_fill()
+
+
+
+# Decoration
+colors = ["red", "orange", "yellow", "green", "blue", "purple", "black"]
+t.penup()
+t.goto(10,60)
+t.pendown()
+
+for each_color in colors:
+    angle = 360 / len(colors)
+    t.color(each_color)
+    t.circle(10)
+    t.right(angle)
+    t.forward(10)
+
+# Happy Birthday message
+t.penup()
+t.goto(-300, 200)
+t.color("yellow")
+t.pendown()
+t.write("Happy Birthday Amma!!! ", font=("Algebraic", 50, "bold"))
+t.color("black")
+
+# Hide the turtle and display the result
+t.hideturtle()
+turtle.done()
